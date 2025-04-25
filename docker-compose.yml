@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  alpine-python:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: alpython
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/app
+    working_dir: /app  
